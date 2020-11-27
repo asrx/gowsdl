@@ -76,6 +76,8 @@ Loop:
 
 				consumed = true
 			} else {
+				b.Fault = nil
+
 				if err = d.DecodeElement(b.Content, &se); err != nil {
 					return err
 				}
